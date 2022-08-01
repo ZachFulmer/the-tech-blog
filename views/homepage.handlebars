@@ -1,1 +1,13 @@
-<p>This is the homepage!</p>
+<section>
+{{#if posts.length}}
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      <a href="/dashboard/edit/{{post.id}}">{{> post-main-info post}}</a>
+    </li>
+    {{/each}}
+  </ol>
+{{else}}
+    <h3>No posts have been made.</h3>
+{{/if}}
+</section>

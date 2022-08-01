@@ -11,13 +11,13 @@
     <header>
         <nav>
             <a href="/">Home</a>
-            <a href="/dashboard">Dashboard</a>
+            <a href="/dashboard" id="dash-link">Dashboard</a>
             {{#if loggedIn}}
-                <a href="/logout">Logout</a>
+                <a href="/api/users/logout">Logout</a>
             {{else}}
                 <a href="/login">Login</a>
             {{/if}}
-            <h1>The Tech Blog</h1>
+            <h1>{{{ title }}}</h1>
         </nav>
     </header>
     <main>
@@ -26,5 +26,6 @@
     <footer>
         Thanks for visiting The Tech Blog!
     </footer>
+    <script src="/javascript/dashboard.js"></script>
 </body>
 </html>

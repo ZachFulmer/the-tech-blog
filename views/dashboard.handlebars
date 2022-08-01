@@ -1,1 +1,14 @@
-<p>This is the dashboard!</p>
+<section>
+    <h2>Your Posts:</h2>
+    {{#if posts.length}}
+    <ol>
+        {{#each posts as |post|}}
+        <li>
+            <a href="/dashboard/edit/{{post.id}}">{{> post-dash-info post}}</a>
+        </li>
+        {{/each}}
+    </ol>
+    {{else}}
+        <h3>You have not made any posts.</h3>
+    {{/if}}
+</section>
