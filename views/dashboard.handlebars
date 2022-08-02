@@ -4,7 +4,12 @@
     <ol>
         {{#each posts as |post|}}
         <li>
-            <a href="/dashboard/edit/{{post.id}}">{{> post-dash-info post}}</a>
+            <a href="/dashboard/edit/{{post.id}}">
+                <div class="card-header">
+                    <h4>{{post.title}}</h4>
+                    <p>Posted by {{post.user_id}} on {{post.created-at}}</p>
+                </div>
+            </a>
         </li>
         {{/each}}
     </ol>
